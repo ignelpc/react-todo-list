@@ -1,0 +1,13 @@
+.nav {background-color: #222; padding: 25px 15px; margin-top: 0;}
+.list {
+    display: flex;
+}
+
+.item {
+    margin-right: 1em;
+}
+
+.item a {color: #fff;}
+.item a:hover {color: darkorange;}
+
+/* .item:last-child {} */
