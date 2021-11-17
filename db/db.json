@@ -10,14 +10,14 @@
     {
       "title": "Tarefa 2",
       "created_at": "05/10/2021 10:14:58",
-      "updated_at": "05/10/2021 10:14:58",
+      "updated_at": "03/10/2021 20:59:44",
       "description": "Fazer CRUD usando Vue",
       "id": 3
     },
     {
       "title": "Tarefa 3",
       "created_at": "05/10/2021 10:15:16",
-      "updated_at": "05/10/2021 10:15:16",
+      "updated_at": "03/10/2021 21:39:58",
       "description": "Fazer CRUD usando Angular",
       "id": 6
     },

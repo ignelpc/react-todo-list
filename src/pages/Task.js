@@ -82,8 +82,7 @@ function Task() {
         })
             .then((res) => res.json())
             .then((data) => {
-                navigate('/', { message: "Tarefa criada com sucesso" });
-                setFlashMessage({ type: "success", message: "Tarefa criada com sucesso" });
+                navigate('/', { state: { type: "success", message: "Tarefa criada com sucesso" } });
             })
             .catch((err) => console.log(`Error::: ${err}`));
     }
@@ -106,8 +105,7 @@ function Task() {
         })
             .then((res) => res.json())
             .then((data) => {
-                navigate('/', { message: "Tarefa atualizada com sucesso" });
-                setFlashMessage({ type: "success", message: "Tarefa atualizada com sucesso" });
+                navigate('/', { state: { type: "success", message: "Tarefa atualizada com sucesso" } });
             })
             .catch((err) => console.log(`Error::: ${err}`));
     }
