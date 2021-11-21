@@ -21,17 +21,14 @@ function Task() {
         }
     }, [id])
 
-    function getDate() {
+    function getTimestamp() {
         let date = new Date();
-        let day = date.getDay();
-        let month = date.getMonth();
+        let day = String(date.getDate()).padStart(2, '0');
+        let month = String(date.getMonth()).padStart(2, '0');
         let year = date.getFullYear();
         let hours = date.getHours();
-        let minutes = date.getMinutes();
-        let seconds = date.getSeconds();
-
-        if (day.toString().length === 1) day = '0' + day;
-        if (month.toString().length === 1) month = '0' + month;
+        let minutes = String(date.getMinutes()).padStart(2, '0');
+        let seconds = String(date.getSeconds()).padStart(2, '0');
 
         return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
     }
@@ -52,7 +49,7 @@ function Task() {
     }
 
     function handleChange(e) {
-        setTask({ ...task, [e.target.name]: e.target.value, created_at: getDate(), updated_at: getDate() });
+        setTask({ ...task, [e.target.name]: e.target.value, created_at: getTimestamp(), updated_at: getTimestamp() });
     }
 
     const submit = (e) => {
@@ -94,7 +91,7 @@ function Task() {
         }
 
         delete task.created_at
-        task.updated_at = getDate()
+        task.updated_at = getTimestamp()
 
         fetch(`http://localhost:5000/tasks/${idTask}`, {
             method: "PATCH",
